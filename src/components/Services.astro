@@ -1,0 +1,210 @@
+---
+// src/components/Services.astro
+---
+
+<section id="servicios" class="services-stage">
+  <div class="container">
+    <div class="section-badge-center">
+      <span class="pulse-dot"></span>
+      <span>Arquitectura &bull; Capacidades de Ingeniería</span>
+    </div>
+
+    <h2 class="section-headline">
+      Soluciones técnicas de <span class="headline-gradient">alto impacto</span>
+    </h2>
+    <p class="section-subline">
+      Desde plataformas de gestión empresarial hasta aplicaciones nativas y despliegues cloud escalables.
+    </p>
+
+    <div class="bento-matrix">
+      <!-- Módulo 1 -->
+      <div class="bento-box box-large">
+        <div class="box-top">
+          <span class="badge-chip purple">Core Architecture</span>
+          <span class="icon-avatar">📈</span>
+        </div>
+        <h3>Sistemas CRM & ERP a la Medida</h3>
+        <p>
+          Modelamos y construimos el núcleo operativo de tu negocio: embudos de venta automatizados, cotizadores dinámicos, control de inventarios multi-almacén y reportes ejecutivos en vivo.
+        </p>
+        <div class="bento-tags">
+          <span class="tag-item">Pipeline en Vivo</span>
+          <span class="tag-item">Gestión de Roles</span>
+          <span class="tag-item">Exportación PDF/Excel</span>
+        </div>
+      </div>
+
+      <!-- Módulo 2 -->
+      <div class="bento-box box-medium">
+        <div class="box-top">
+          <span class="badge-chip blue">Mobile Engineering</span>
+          <span class="icon-avatar">📱</span>
+        </div>
+        <h3>Apps Nativas con Flutter</h3>
+        <p>
+          Una base de código única para iOS y Android con rendimiento fluido a 60 FPS, notificaciones push, modo offline inteligente y sincronización instantánea con el backend.
+        </p>
+        <div class="bento-tags">
+          <span class="tag-item">App Store & Play Store</span>
+          <span class="tag-item">Dart / Flutter Core</span>
+        </div>
+      </div>
+
+      <!-- Módulo 3 -->
+      <div class="bento-box box-medium">
+        <div class="box-top">
+          <span class="badge-chip cyan">Transaccional</span>
+          <span class="icon-avatar">💳</span>
+        </div>
+        <h3>Puntos de Venta (POS)</h3>
+        <p>
+          Sistemas transaccionales de cobro rápido, corte de caja automatizado, control de inventario de refacciones/vehículos e integración con impresoras térmicas y lectores.
+        </p>
+        <div class="bento-tags">
+          <span class="tag-item">Cortes Automáticos</span>
+          <span class="tag-item">Modo Offline Seguro</span>
+        </div>
+      </div>
+
+      <!-- Módulo 4 -->
+      <div class="bento-box box-medium">
+        <div class="box-top">
+          <span class="badge-chip blue">High Performance</span>
+          <span class="icon-avatar">⚡</span>
+        </div>
+        <h3>Web Apps & Portales de Catálogo</h3>
+        <p>
+          Portales corporativos ultrarrápidos construidos con Astro y TypeScript. Rendimiento de 100/100 en Core Web Vitals, indexación SEO nativa y cotizadores integrados.
+        </p>
+        <div class="bento-tags">
+          <span class="tag-item">Velocidad Extrema</span>
+          <span class="tag-item">WhatsApp Lead Sync</span>
+        </div>
+      </div>
+
+      <!-- Módulo 5 -->
+      <div class="bento-box box-medium">
+        <div class="box-top">
+          <span class="badge-chip purple">Cloud Infra</span>
+          <span class="icon-avatar">🛡️</span>
+        </div>
+        <h3>Consultoría Senior & Cloud</h3>
+        <p>
+          Diagnóstico de bases de datos relacionales, optimización de queries SQL, arquitectura de microservicios con Spring Boot y despliegues contenerizados en Docker.
+        </p>
+        <div class="bento-tags">
+          <span class="tag-item">Docker & AWS</span>
+          <span class="tag-item">Tuning PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .services-stage {
+    width: 100%;
+    padding: 6rem 0 7rem;
+    background: transparent;
+  }
+
+  .bento-matrix {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+    text-align: left;
+  }
+
+  .bento-matrix .box-large { grid-column: span 2; }
+  .bento-matrix .box-medium { grid-column: span 1; }
+
+  @media (max-width: 960px) {
+    .bento-matrix { grid-template-columns: 1fr !important; }
+    .bento-matrix .box-large, 
+    .bento-matrix .box-medium { grid-column: span 1 !important; }
+  }
+
+  .bento-box {
+    background: #ffffff !important;
+    border: 1px solid rgba(11, 19, 43, 0.09) !important;
+    border-radius: 22px !important;
+    padding: 2.2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: 0 10px 25px -5px rgba(11, 19, 43, 0.05) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .bento-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px -5px rgba(37, 99, 235, 0.1) !important;
+  }
+
+  .box-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 1.25rem;
+  }
+
+  .badge-chip {
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .badge-chip.purple {
+    background: rgba(124, 58, 237, 0.08);
+    color: #7C3AED;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+  }
+  .badge-chip.blue {
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563EB;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+  }
+  .badge-chip.cyan {
+    background: rgba(6, 182, 212, 0.08);
+    color: #06B6D4;
+    border: 1px solid rgba(6, 182, 212, 0.2);
+  }
+
+  .icon-avatar {
+    font-size: 1.6rem;
+  }
+
+  .bento-box h3 {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #0B132B;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.6rem;
+  }
+
+  .bento-box p {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .bento-tags {
+    margin-top: auto;
+    display: flex !important;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag-item {
+    font-size: 0.75rem;
+    color: #1E293B;
+    background: #F1F5F9;
+    border: 1px solid rgba(11, 19, 43, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+</style>

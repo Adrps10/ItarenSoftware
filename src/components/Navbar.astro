@@ -1,0 +1,138 @@
+---
+// src/components/Navbar.astro
+---
+
+<header class="navbar-wrapper">
+  <div class="container navbar">
+    <a href="#" class="brand">
+      <svg class="brand-icon" width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="10" fill="rgba(37, 99, 235, 0.08)" stroke="rgba(37, 99, 235, 0.3)" stroke-width="1.5"/>
+        <path d="M12 25L18 11L24 25" stroke="#2563EB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.5 20H21.5" stroke="#7C3AED" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="18" cy="11" r="2.2" fill="#06B6D4"/>
+      </svg>
+
+      <div class="brand-text-group">
+        <span class="logo-name">ITAREN<span class="gradient-text">.SOFTWARE</span></span>
+        <span class="logo-subtitle code-font">DIGITAL CONSULTING</span>
+      </div>
+    </a>
+    
+    <nav class="nav-links">
+      <a href="#proyectos" class="nav-item">Proyectos</a>
+      <a href="#servicios" class="nav-item">Servicios</a>
+      <a href="#cotizador" class="nav-item">Cotizador</a>
+      <a href="#contacto" class="btn-nav">Iniciar Proyecto</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .navbar-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(241, 245, 249, 0.85);
+    border-bottom: 1px solid rgba(11, 19, 43, 0.08);
+    width: 100%;
+  }
+
+  .navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.9rem 0;
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .brand {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+  }
+
+  .brand-icon {
+    width: 34px !important;
+    height: 34px !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.25s ease;
+  }
+
+  .brand:hover .brand-icon {
+    transform: scale(1.06);
+  }
+
+  .brand-text-group {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: left !important;
+  }
+
+  .logo-name {
+    font-size: 1.18rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px !important;
+    color: #0B132B !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .logo-subtitle {
+    font-size: 0.62rem !important;
+    color: #64748B !important;
+    letter-spacing: 1.2px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 2rem !important;
+  }
+
+  .nav-item {
+    color: #1E293B !important;
+    text-decoration: none !important;
+    font-size: 0.92rem !important;
+    font-weight: 600 !important;
+    transition: color 0.2s ease;
+  }
+
+  .nav-item:hover {
+    color: #2563EB !important;
+  }
+
+  .btn-nav {
+    background: #2563EB !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 0.6rem 1.35rem !important;
+    border-radius: 10px !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    white-space: nowrap !important;
+  }
+
+  .btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35) !important;
+  }
+</style>

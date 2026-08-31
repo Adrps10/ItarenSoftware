@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
+// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Clients from '../components/Clients.astro';
+import Projects from '../components/Projects.astro';
+import Services from '../components/Services.astro';
+import Estimator from '../components/Estimator.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import FAQ from '../components/FAQ.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Itaren Software | Consultoría, CRM, POS & Apps Móviles">
+  <Navbar />
+  <main>
+    <Hero />
+    <Clients />
+    <Projects />
+    <Services />
+    <Estimator />
+    <FAQ />
+    <Contact />
+  </main>
+  <Footer />
+  <WhatsAppButton />
 </Layout>

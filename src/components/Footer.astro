@@ -1,0 +1,184 @@
+---
+// src/components/Footer.astro
+const year = new Date().getFullYear();
+---
+
+<footer class="apple-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="brand-column">
+        <div class="brand-logo">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="10" fill="rgba(37, 99, 235, 0.08)" stroke="rgba(37, 99, 235, 0.3)" stroke-width="1.5"/>
+            <path d="M12 25L18 11L24 25" stroke="#2563EB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.5 20H21.5" stroke="#7C3AED" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="18" cy="11" r="2.2" fill="#06B6D4"/>
+          </svg>
+          <span class="brand-name">ITAREN<span class="gradient-text">.SOFTWARE</span></span>
+        </div>
+        <p class="brand-desc">
+          Ingeniería de software de alta disponibilidad, sistemas transaccionales CRM/POS y aplicaciones móviles nativas.
+        </p>
+      </div>
+
+      <div class="links-matrix">
+        <div class="link-col">
+          <span class="col-title code-font">SOLUCIONES</span>
+          <a href="#servicios">Sistemas CRM / ERP</a>
+          <a href="#servicios">Apps Móviles Flutter</a>
+          <a href="#servicios">Punto de Venta (POS)</a>
+          <a href="#servicios">Cloud & APIs</a>
+        </div>
+        <div class="link-col">
+          <span class="col-title code-font">EMPRESA</span>
+          <a href="#proyectos">Casos de Éxito</a>
+          <a href="#cotizador">Configurador</a>
+          <a href="#contacto">Contacto Directo</a>
+        </div>
+        <div class="link-col">
+          <span class="col-title code-font">TECNOLOGÍA</span>
+          <span class="tech-item">Java & Spring Boot</span>
+          <span class="tech-item">PostgreSQL / Oracle</span>
+          <span class="tech-item">Flutter & Dart</span>
+          <span class="tech-item">Docker & AWS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright code-font">
+        &copy; {year} ITAREN SOFTWARE. Todos los derechos reservados.
+      </p>
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span class="status-text code-font">SISTEMAS OPERATIVOS 100%</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style is:global>
+  .apple-footer {
+    width: 100%;
+    padding: 5rem 0 3rem;
+    background: #ffffff !important;
+    border-top: 1px solid rgba(11, 19, 43, 0.08);
+    position: relative;
+    z-index: 10;
+  }
+
+  .footer-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 4rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(11, 19, 43, 0.06);
+    flex-wrap: wrap;
+  }
+
+  .brand-column {
+    max-width: 380px;
+    text-align: left;
+  }
+
+  .brand-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: #0B132B;
+    letter-spacing: -0.5px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .brand-desc {
+    font-size: 0.9rem;
+    color: #64748B;
+    line-height: 1.6;
+  }
+
+  .links-matrix {
+    display: flex !important;
+    gap: 3.5rem;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  .link-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem;
+  }
+
+  .col-title {
+    font-size: 0.72rem;
+    color: #0B132B;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+  }
+
+  .link-col a {
+    font-size: 0.88rem;
+    color: #475569;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .link-col a:hover {
+    color: #2563EB;
+  }
+
+  .tech-item {
+    font-size: 0.88rem;
+    color: #94A3B8;
+  }
+
+  .footer-bottom {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.78rem;
+    color: #94A3B8;
+  }
+
+  .status-indicator {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    padding: 3px 10px;
+    border-radius: 9999px;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    background: #10B981;
+    border-radius: 50%;
+  }
+
+  .status-text {
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #10B981;
+  }
+</style>

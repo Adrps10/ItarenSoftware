@@ -1,0 +1,75 @@
+---
+// src/components/TechStack.astro
+const techs = [
+  "Java & Spring Boot",
+  "PostgreSQL & MySQL",
+  "Docker & Containers",
+  "Astro & SSR",
+  "Vue / React",
+  "REST & GraphQL APIs",
+  "Microservicios",
+  "AWS Cloud Infra",
+  "Flutter & Dart" /* Añadido Flutter */
+];
+---
+
+<section id="stack" class="stack-marquee-wrapper">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      {techs.concat(techs).map((tech) => (
+        <div class="tech-item code-font">
+          <span class="tech-dot"></span>
+          {tech}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .stack-marquee-wrapper {
+    padding: 2.2rem 0;
+    overflow: hidden;
+    /* Gris muy claro de la nueva paleta */
+    background: #F1F5F9;
+    /* Borde sutil oscuro */
+    border-top: 1px solid rgba(11, 19, 43, 0.06);
+    border-bottom: 1px solid rgba(11, 19, 43, 0.06);
+    position: relative;
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+  }
+
+  .marquee-content {
+    display: flex;
+    gap: 3.5rem; /* Un poco más de gap */
+    animation: scroll 30s linear infinite; /* Un poco más lento */
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .tech-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    /* Gris carbón para texto */
+    color: #1E293B;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  .tech-dot {
+    width: 7px;
+    height: 7px;
+    /* Azul Tecnológico */
+    background: #2563EB;
+    border-radius: 50%;
+  }
+</style>

@@ -1,0 +1,144 @@
+---
+// src/components/FAQ.astro
+const faqs = [
+  {
+    q: "¿Quién es el propietario del código fuente al finalizar el proyecto?",
+    a: "Tú eres el propietario absoluto del 100% del código fuente, las bases de datos y la propiedad intelectual. Al concluir y liquidar el desarrollo, te transferimos los repositorios completos (Git), credenciales y documentación técnica sin ataduras ni cobros ocultos de licenciamiento."
+  },
+  {
+    q: "¿Cómo es el proceso de trabajo y los tiempos de entrega promedio?",
+    a: "Trabajamos con sprints ágiles de 2 semanas con entregables visuales y funcionales en servidores de prueba (staging). Proyectos medianos (como un CRM especializado o un POS) suelen tomar entre 4 y 8 semanas, mientras que aplicaciones móviles completas toman entre 8 y 12 semanas."
+  },
+  {
+    q: "¿Qué tipo de soporte y garantía ofrecen después del lanzamiento?",
+    a: "Todos nuestros desarrollos incluyen garantía contra bugs o fallas técnicas durante los primeros 60 días posteriores a la salida a producción. Además, ofrecemos planes mensuales de mantenimiento, escalabilidad en la nube (AWS/Docker) y soporte continuo."
+  },
+  {
+    q: "¿Pueden integrar el software con mis sistemas actuales (ERP, WhatsApp, Pasarelas)?",
+    a: "Sí. Desarrollamos arquitecturas de microservicios y APIs REST diseñadas específicamente para comunicarse con sistemas existentes como SAP, Salesforce, pasarelas de pago (Stripe, Mercado Pago) y Webhooks automatizados de WhatsApp Business."
+  },
+  {
+    q: "¿Cómo se manejan los pagos del proyecto?",
+    a: "Estructuramos el pago contra hitos medibles: un anticipo inicial para iniciar el levantamiento y diseño de arquitectura, pagos intermedios contra entregables funcionales verificados, y un saldo final contra entrega de código y despliegue a producción."
+  }
+];
+---
+
+<section id="faq" class="faq-stage">
+  <div class="container">
+    <div class="section-badge-center">
+      <span class="pulse-dot"></span>
+      <span>Dudas Frecuentes &bull; Claridad Total</span>
+    </div>
+
+    <h2 class="section-headline">
+      Todo lo que necesitas saber antes de <span class="headline-gradient">iniciar</span>
+    </h2>
+    <p class="section-subline">
+      Respuestas claras sobre propiedad de código, tiempos de desarrollo, soporte y metodología de trabajo.
+    </p>
+
+    <div class="faq-accordion-group">
+      {faqs.map((item, idx) => (
+        <details class="faq-item" open={idx === 0}>
+          <summary class="faq-question">
+            <span class="q-title">{item.q}</span>
+            <span class="q-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>{item.a}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .faq-stage {
+    width: 100%;
+    padding: 6rem 0 7rem;
+    background: transparent;
+  }
+
+  .faq-accordion-group {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem;
+    text-align: left;
+  }
+
+  .faq-item {
+    background: #ffffff !important;
+    border: 1px solid rgba(11, 19, 43, 0.08) !important;
+    border-radius: 20px !important;
+    padding: 0.5rem 1.8rem !important;
+    box-shadow: 0 4px 12px -2px rgba(11, 19, 43, 0.03) !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .faq-item:hover {
+    border-color: rgba(37, 99, 235, 0.3) !important;
+    box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.08) !important;
+  }
+
+  .faq-item[open] {
+    border-color: rgba(37, 99, 235, 0.3) !important;
+    box-shadow: 0 12px 28px -6px rgba(11, 19, 43, 0.08) !important;
+  }
+
+  .faq-question {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1.4rem 0 !important;
+    cursor: pointer !important;
+    list-style: none !important;
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: #0B132B;
+    user-select: none;
+    letter-spacing: -0.3px;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none !important;
+  }
+
+  .q-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F1F5F9;
+    color: #2563EB;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .faq-item[open] .q-icon {
+    transform: rotate(180deg);
+    background: rgba(37, 99, 235, 0.1);
+  }
+
+  .faq-answer {
+    padding: 0 0 1.5rem 0 !important;
+    border-top: 1px solid rgba(11, 19, 43, 0.06);
+    padding-top: 1.2rem !important;
+  }
+
+  .faq-answer p {
+    font-size: 0.98rem;
+    color: #334155;
+    line-height: 1.7;
+    margin: 0;
+  }
+</style>

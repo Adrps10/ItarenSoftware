@@ -1,0 +1,295 @@
+---
+// src/components/Estimator.astro
+---
+
+<section id="cotizador" class="estimator-stage">
+  <div class="container">
+    <div class="section-badge-center reveal-on-scroll">
+      <span class="pulse-dot"></span>
+      <span>Configurador en Vivo</span>
+    </div>
+
+    <h2 class="section-headline reveal-on-scroll">
+      Calcula el alcance de <span class="headline-gradient">tu proyecto</span>
+    </h2>
+    <p class="section-subline reveal-on-scroll">
+      Selecciona los módulos clave para generar una cotización técnica personalizada en segundos.
+    </p>
+
+    <!-- Glass Box Estimator -->
+    <div class="estimator-card reveal-on-scroll">
+      <div class="options-matrix">
+        <label class="interactive-option">
+          <input type="checkbox" name="service" value="CRM & Gestión de Ventas" checked class="calc-box" />
+          <div class="option-body">
+            <span class="opt-title">Sistema CRM / ERP Core</span>
+            <span class="opt-desc">Embudo de ventas, catálogo, cotizaciones en 1 clic y roles</span>
+          </div>
+        </label>
+
+        <label class="interactive-option">
+          <input type="checkbox" name="service" value="App Móvil Flutter (iOS & Android)" checked class="calc-box" />
+          <div class="option-body">
+            <span class="opt-title">App Móvil Flutter (iOS & Android)</span>
+            <span class="opt-desc">Modo offline, notificaciones push y captura multimedia</span>
+          </div>
+        </label>
+
+        <label class="interactive-option">
+          <input type="checkbox" name="service" value="Punto de Venta (POS)" class="calc-box" />
+          <div class="option-body">
+            <span class="opt-title">Punto de Venta Transaccional</span>
+            <span class="opt-desc">Control de caja, facturación, ticket térmico y corte del día</span>
+          </div>
+        </label>
+
+        <label class="interactive-option">
+          <input type="checkbox" name="service" value="Portal Web Showroom" class="calc-box" />
+          <div class="option-body">
+            <span class="opt-title">Portal Web & Showroom Digital</span>
+            <span class="opt-desc">Catálogo de alta velocidad con redirección de leads a WhatsApp</span>
+          </div>
+        </label>
+
+        <label class="interactive-option">
+          <input type="checkbox" name="service" value="Integraciones & APIs REST" class="calc-box" />
+          <div class="option-body">
+            <span class="opt-title">Integraciones & Conexiones API</span>
+            <span class="opt-desc">Pasarelas de pago, webhooks y sincronización ERP</span>
+          </div>
+        </label>
+
+        <label class="interactive-option">
+          <input type="checkbox" name="service" value="Auditoría Cloud & Bases de Datos" class="calc-box" />
+          <div class="option-body">
+            <span class="opt-title">Consultoría & Despliegue Cloud</span>
+            <span class="opt-desc">Bases de datos en PostgreSQL, Docker y seguridad HTTPS/JWT</span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Barra de Resumen Ejecutivo -->
+      <div class="summary-ribbon">
+        <div class="summary-stats">
+          <span class="sum-lbl code-font">MÓDULOS SELECCIONADOS</span>
+          <span id="selected-count" class="sum-val">2 Módulos Activos</span>
+        </div>
+        <a href="#contacto" id="btn-prefill" class="summary-btn">
+          <span>Cotizar esta configuración</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function initEstimator() {
+    const checkboxes = document.querySelectorAll('.calc-box');
+    const countLabel = document.getElementById('selected-count');
+    const contactTextarea = document.querySelector('#contact-message');
+
+    function updateEstimate() {
+      const selected = [];
+      checkboxes.forEach((cb) => {
+        if (cb.checked) selected.push(cb.value);
+      });
+
+      if (countLabel) {
+        countLabel.textContent = `${selected.length} ${selected.length === 1 ? 'Módulo Activo' : 'Módulos Activos'}`;
+      }
+
+      if (contactTextarea) {
+        contactTextarea.value = `Hola, me interesa iniciar un proyecto con ITAREN SOFTWARE con los siguientes módulos: ${selected.join(', ')}.`;
+      }
+    }
+
+    checkboxes.forEach((cb) => cb.addEventListener('change', updateEstimate));
+    updateEstimate();
+  })();
+</script>
+
+<style>
+  .estimator-stage {
+    padding: 7rem 0 8rem;
+    background: #F1F5F9;
+  }
+
+  .section-badge-center {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(11, 19, 43, 0.1);
+    padding: 0.45rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0B132B;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px -2px rgba(11, 19, 43, 0.04);
+  }
+
+  .pulse-dot {
+    width: 7px;
+    height: 7px;
+    background: #2563EB;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+  }
+
+  .section-headline {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: #0B132B;
+    line-height: 1.08;
+    margin-bottom: 1.2rem;
+  }
+
+  .headline-gradient {
+    background: linear-gradient(135deg, #2563EB 0%, #7C3AED 60%, #06B6D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-subline {
+    font-size: 1.15rem;
+    color: #475569;
+    max-width: 680px;
+    margin: 0 auto 4.5rem;
+    line-height: 1.7;
+  }
+
+  .estimator-card {
+    background: #ffffff;
+    border: 1px solid rgba(11, 19, 43, 0.08);
+    border-radius: 28px;
+    padding: 3.5rem;
+    max-width: 1060px;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px -15px rgba(11, 19, 43, 0.06);
+  }
+
+  @media (max-width: 768px) {
+    .estimator-card { padding: 2rem 1.5rem; }
+  }
+
+  .options-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .interactive-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 1.6rem;
+    background: #ffffff;
+    border: 1.5px solid rgba(11, 19, 43, 0.08);
+    border-radius: 18px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .interactive-option:hover {
+    border-color: rgba(37, 99, 235, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(11, 19, 43, 0.04);
+  }
+
+  .interactive-option:has(input:checked) {
+    background: #F8FAFC;
+    border-color: #2563EB;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.12);
+  }
+
+  .interactive-option input {
+    accent-color: #2563EB;
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+
+  .opt-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0B132B;
+    margin-bottom: 0.3rem;
+  }
+
+  .opt-desc {
+    display: block;
+    font-size: 0.85rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  .summary-ribbon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0B132B;
+    padding: 1.5rem 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px -10px rgba(11, 19, 43, 0.3);
+  }
+
+  @media (max-width: 700px) {
+    .summary-ribbon {
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+      padding: 2rem;
+    }
+  }
+
+  .summary-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+  }
+  @media (max-width: 700px) {
+    .summary-stats { text-align: center; }
+  }
+
+  .sum-lbl {
+    font-size: 0.72rem;
+    color: #94A3B8;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .sum-val {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #06B6D4;
+    letter-spacing: -0.5px;
+  }
+
+  .summary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #2563EB;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 1.1rem 2.2rem;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .summary-btn:hover {
+    transform: translateY(-2px);
+    background: #1d4ed8;
+  }
+</style>
