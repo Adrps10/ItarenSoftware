@@ -8,7 +8,6 @@ const clientLogos = [
   { name: "Inmotion", src: "/logos/inmotion.svg" }
 ];
 
-// Multiplicamos para asegurar un loop infinito continuo y balanceado
 const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
 ---
 
@@ -18,7 +17,6 @@ const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
 
   <div class="marquee-viewport" id="marquee-viewport">
     <div class="marquee-track" id="marquee-track">
-      <!-- Bloque 1 -->
       <div class="marquee-group">
         {fullList.map((client) => (
           <div class="logo-item" title={client.name}>
@@ -26,7 +24,6 @@ const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
           </div>
         ))}
       </div>
-      <!-- Bloque 2 Duplicado para loop sin saltos -->
       <div class="marquee-group" aria-hidden="true">
         {fullList.map((client) => (
           <div class="logo-item" title={client.name}>
@@ -71,20 +68,17 @@ const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
   }
 </script>
 
-<style>
+<style is:global>
   .clients-section {
     width: 100%;
-    padding: 4rem 0 4.5rem;
+    padding: 3.5rem 0 4rem;
     overflow: hidden;
     position: relative;
-    /* Bordes sutiles oscuros (Azul noche con baja opacidad) */
-    border-top: 1px solid rgba(11, 19, 43, 0.08);
-    border-bottom: 1px solid rgba(11, 19, 43, 0.08);
-    /* Fondo blanco puro para contraste premium */
-    background: #ffffff;
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    background: transparent;
   }
 
-  /* Luz difusa central suavizada (Cian tech) */
   .clients-glow {
     position: absolute;
     top: 50%;
@@ -92,19 +86,18 @@ const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
     transform: translate(-50%, -50%);
     width: 60%;
     height: 100%;
-    background: radial-gradient(ellipse at center, rgba(6, 182, 212, 0.06) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
     pointer-events: none;
   }
 
   .clients-title {
     text-align: center;
     font-size: 0.78rem;
-    /* Gris carbón para texto secundario */
-    color: #1E293B;
+    color: #64748B;
     letter-spacing: 2px;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 800;
   }
 
   .marquee-viewport {
@@ -139,8 +132,8 @@ const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4rem; /* Un poco más de espacio */
-    padding-right: 4rem;
+    gap: 4.5rem;
+    padding-right: 4.5rem;
     flex-shrink: 0;
   }
 
@@ -148,32 +141,29 @@ const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 0.5rem;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
     flex-shrink: 0;
   }
 
   .logo-item:hover {
-    transform: scale(1.06);
+    transform: scale(1.08);
   }
 
-  /* Logos: Lógica invertida para fondo claro */
   .logo-img {
-    height: 40px !important; /* Ligeramente más grandes */
+    height: 34px !important;
     width: auto !important;
-    max-width: 180px !important;
+    max-width: 150px !important;
     object-fit: contain;
     display: block;
-    /* Gris oscuro por defecto */
-    filter: brightness(0) opacity(0.6);
-    transition: filter 0.3s ease, opacity 0.3s ease;
+    filter: grayscale(1) opacity(0.5);
+    transition: opacity 0.25s ease, filter 0.25s ease;
   }
 
   .logo-item:hover .logo-img {
-    /* Negro puro o color original en hover */
-    filter: brightness(0) opacity(1);
-    /* Sombra suave oscura */
-    drop-shadow(0 4px 6px rgba(11, 19, 43, 0.1));
+    filter: grayscale(0) opacity(1);
   }
 </style>

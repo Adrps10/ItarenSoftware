@@ -17,10 +17,9 @@
     </p>
 
     <div class="bento-matrix">
-      <!-- Módulo 1 -->
       <div class="bento-box box-large">
         <div class="box-top">
-          <span class="badge-chip purple">Core Architecture</span>
+          <span class="badge-chip blue">Core Architecture</span>
           <span class="icon-avatar">📈</span>
         </div>
         <h3>Sistemas CRM & ERP a la Medida</h3>
@@ -34,10 +33,9 @@
         </div>
       </div>
 
-      <!-- Módulo 2 -->
       <div class="bento-box box-medium">
         <div class="box-top">
-          <span class="badge-chip blue">Mobile Engineering</span>
+          <span class="badge-chip emerald">Mobile Engineering</span>
           <span class="icon-avatar">📱</span>
         </div>
         <h3>Apps Nativas con Flutter</h3>
@@ -50,10 +48,9 @@
         </div>
       </div>
 
-      <!-- Módulo 3 -->
       <div class="bento-box box-medium">
         <div class="box-top">
-          <span class="badge-chip cyan">Transaccional</span>
+          <span class="badge-chip blue">Transaccional</span>
           <span class="icon-avatar">💳</span>
         </div>
         <h3>Puntos de Venta (POS)</h3>
@@ -66,10 +63,9 @@
         </div>
       </div>
 
-      <!-- Módulo 4 -->
       <div class="bento-box box-medium">
         <div class="box-top">
-          <span class="badge-chip blue">High Performance</span>
+          <span class="badge-chip dark">High Performance</span>
           <span class="icon-avatar">⚡</span>
         </div>
         <h3>Web Apps & Portales de Catálogo</h3>
@@ -82,10 +78,9 @@
         </div>
       </div>
 
-      <!-- Módulo 5 -->
       <div class="bento-box box-medium">
         <div class="box-top">
-          <span class="badge-chip purple">Cloud Infra</span>
+          <span class="badge-chip blue">Cloud Infra</span>
           <span class="icon-avatar">🛡️</span>
         </div>
         <h3>Consultoría Senior & Cloud</h3>
@@ -125,19 +120,19 @@
   }
 
   .bento-box {
-    background: #ffffff !important;
-    border: 1px solid rgba(11, 19, 43, 0.09) !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(15, 23, 42, 0.08) !important;
     border-radius: 22px !important;
     padding: 2.2rem !important;
     display: flex !important;
     flex-direction: column !important;
-    box-shadow: 0 10px 25px -5px rgba(11, 19, 43, 0.05) !important;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04) !important;
+    transition: transform 0.25s ease, border-color 0.25s ease;
   }
 
   .bento-box:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 35px -5px rgba(37, 99, 235, 0.1) !important;
+    border-color: #2563EB !important;
   }
 
   .box-top {
@@ -156,20 +151,22 @@
     letter-spacing: 0.5px;
   }
 
-  .badge-chip.purple {
-    background: rgba(124, 58, 237, 0.08);
-    color: #7C3AED;
-    border: 1px solid rgba(124, 58, 237, 0.2);
-  }
   .badge-chip.blue {
     background: rgba(37, 99, 235, 0.08);
     color: #2563EB;
     border: 1px solid rgba(37, 99, 235, 0.2);
   }
-  .badge-chip.cyan {
-    background: rgba(6, 182, 212, 0.08);
-    color: #06B6D4;
-    border: 1px solid rgba(6, 182, 212, 0.2);
+
+  .badge-chip.emerald {
+    background: rgba(16, 185, 129, 0.08);
+    color: #10B981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  .badge-chip.dark {
+    background: #0F172A;
+    color: #FFFFFF;
+    border: 1px solid #0F172A;
   }
 
   .icon-avatar {
@@ -179,14 +176,14 @@
   .bento-box h3 {
     font-size: 1.35rem;
     font-weight: 900;
-    color: #0B132B;
+    color: #0F172A;
     letter-spacing: -0.5px;
     margin-bottom: 0.6rem;
   }
 
   .bento-box p {
     font-size: 0.95rem;
-    color: #334155;
+    color: #475569;
     line-height: 1.6;
     margin-bottom: 1.75rem;
   }
@@ -200,9 +197,9 @@
 
   .tag-item {
     font-size: 0.75rem;
-    color: #1E293B;
+    color: #0F172A;
     background: #F1F5F9;
-    border: 1px solid rgba(11, 19, 43, 0.08);
+    border: 1px solid rgba(15, 23, 42, 0.06);
     padding: 4px 10px;
     border-radius: 6px;
     font-weight: 600;

@@ -4,20 +4,19 @@
 
 <section id="cotizador" class="estimator-stage">
   <div class="container">
-    <div class="section-badge-center reveal-on-scroll">
+    <div class="section-badge-center">
       <span class="pulse-dot"></span>
       <span>Configurador en Vivo</span>
     </div>
 
-    <h2 class="section-headline reveal-on-scroll">
+    <h2 class="section-headline">
       Calcula el alcance de <span class="headline-gradient">tu proyecto</span>
     </h2>
-    <p class="section-subline reveal-on-scroll">
+    <p class="section-subline">
       Selecciona los módulos clave para generar una cotización técnica personalizada en segundos.
     </p>
 
-    <!-- Glass Box Estimator -->
-    <div class="estimator-card reveal-on-scroll">
+    <div class="estimator-card">
       <div class="options-matrix">
         <label class="interactive-option">
           <input type="checkbox" name="service" value="CRM & Gestión de Ventas" checked class="calc-box" />
@@ -68,7 +67,6 @@
         </label>
       </div>
 
-      <!-- Barra de Resumen Ejecutivo -->
       <div class="summary-ribbon">
         <div class="summary-stats">
           <span class="sum-lbl code-font">MÓDULOS SELECCIONADOS</span>
@@ -109,102 +107,56 @@
   })();
 </script>
 
-<style>
+<style is:global>
   .estimator-stage {
-    padding: 7rem 0 8rem;
-    background: #F1F5F9;
-  }
-
-  .section-badge-center {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #ffffff;
-    border: 1px solid rgba(11, 19, 43, 0.1);
-    padding: 0.45rem 1.2rem;
-    border-radius: 9999px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: #0B132B;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px -2px rgba(11, 19, 43, 0.04);
-  }
-
-  .pulse-dot {
-    width: 7px;
-    height: 7px;
-    background: #2563EB;
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
-  }
-
-  .section-headline {
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-    font-weight: 900;
-    letter-spacing: -2px;
-    color: #0B132B;
-    line-height: 1.08;
-    margin-bottom: 1.2rem;
-  }
-
-  .headline-gradient {
-    background: linear-gradient(135deg, #2563EB 0%, #7C3AED 60%, #06B6D4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .section-subline {
-    font-size: 1.15rem;
-    color: #475569;
-    max-width: 680px;
-    margin: 0 auto 4.5rem;
-    line-height: 1.7;
+    width: 100%;
+    padding: 6rem 0 7rem;
+    background: transparent;
   }
 
   .estimator-card {
-    background: #ffffff;
-    border: 1px solid rgba(11, 19, 43, 0.08);
-    border-radius: 28px;
-    padding: 3.5rem;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    border-radius: 26px !important;
+    padding: 3rem !important;
     max-width: 1060px;
     margin: 0 auto;
-    box-shadow: 0 20px 50px -15px rgba(11, 19, 43, 0.06);
+    box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.05) !important;
   }
 
   @media (max-width: 768px) {
-    .estimator-card { padding: 2rem 1.5rem; }
+    .estimator-card { padding: 1.8rem 1.2rem !important; }
   }
 
   .options-matrix {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.4rem;
-    margin-bottom: 3rem;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.4rem !important;
+    margin-bottom: 2.5rem;
   }
 
   .interactive-option {
-    display: flex;
-    align-items: flex-start;
+    display: flex !important;
+    align-items: flex-start !important;
     gap: 14px;
-    padding: 1.6rem;
-    background: #ffffff;
-    border: 1.5px solid rgba(11, 19, 43, 0.08);
-    border-radius: 18px;
+    padding: 1.5rem !important;
+    background: #F8FAFC !important;
+    border: 1.5px solid rgba(15, 23, 42, 0.08) !important;
+    border-radius: 18px !important;
     cursor: pointer;
     text-align: left;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.2s ease, border-color 0.2s ease;
   }
 
   .interactive-option:hover {
-    border-color: rgba(37, 99, 235, 0.3);
+    border-color: #2563EB !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(11, 19, 43, 0.04);
   }
 
   .interactive-option:has(input:checked) {
-    background: #F8FAFC;
-    border-color: #2563EB;
-    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.12);
+    background: #FFFFFF !important;
+    border-color: #2563EB !important;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1) !important;
   }
 
   .interactive-option input {
@@ -213,13 +165,14 @@
     height: 20px;
     margin-top: 3px;
     cursor: pointer;
+    flex-shrink: 0;
   }
 
   .opt-title {
     display: block;
     font-size: 1rem;
     font-weight: 800;
-    color: #0B132B;
+    color: #0F172A;
     margin-bottom: 0.3rem;
   }
 
@@ -231,32 +184,32 @@
   }
 
   .summary-ribbon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0B132B;
-    padding: 1.5rem 2.5rem;
-    border-radius: 18px;
-    box-shadow: 0 15px 35px -10px rgba(11, 19, 43, 0.3);
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: #0F172A !important;
+    padding: 1.4rem 2.2rem !important;
+    border-radius: 18px !important;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15) !important;
   }
 
   @media (max-width: 700px) {
     .summary-ribbon {
-      flex-direction: column;
-      gap: 1.5rem;
-      text-align: center;
-      padding: 2rem;
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+      text-align: center !important;
+      padding: 1.8rem !important;
     }
   }
 
   .summary-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3px;
     text-align: left;
   }
   @media (max-width: 700px) {
-    .summary-stats { text-align: center; }
+    .summary-stats { text-align: center !important; }
   }
 
   .sum-lbl {
@@ -269,27 +222,27 @@
   .sum-val {
     font-size: 1.35rem;
     font-weight: 900;
-    color: #06B6D4;
+    color: #2563EB;
     letter-spacing: -0.5px;
   }
 
   .summary-btn {
-    display: inline-flex;
-    align-items: center;
+    display: inline-flex !important;
+    align-items: center !important;
     gap: 8px;
-    background: #2563EB;
-    color: #ffffff !important;
+    background: #2563EB !important;
+    color: #FFFFFF !important;
     text-decoration: none !important;
-    padding: 1.1rem 2.2rem;
-    border-radius: 14px;
-    font-weight: 700;
+    padding: 1rem 2rem !important;
+    border-radius: 12px !important;
+    font-weight: 800;
     font-size: 0.95rem;
-    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
-    transition: transform 0.2s ease, background 0.2s ease;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3) !important;
+    transition: transform 0.2s ease, background-color 0.2s ease;
   }
 
   .summary-btn:hover {
     transform: translateY(-2px);
-    background: #1d4ed8;
+    background: #1d4ed8 !important;
   }
 </style>
