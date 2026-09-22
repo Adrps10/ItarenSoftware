@@ -52,10 +52,10 @@
     max-width: 860px;
     margin: 0 auto;
     background: #FFFFFF !important;
-    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    border: 1.5px solid rgba(15, 37, 55, 0.08) !important;
     border-radius: 26px !important;
     padding: 3.5rem !important;
-    box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.06) !important;
+    box-shadow: 0 20px 45px -15px rgba(15, 37, 55, 0.06) !important;
   }
 
   @media (max-width: 768px) {
@@ -69,7 +69,7 @@
 
   .badge-tag {
     display: inline-block;
-    color: #2563EB;
+    color: #C7A96A;
     font-size: 0.8rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
@@ -79,13 +79,13 @@
     font-size: clamp(2rem, 3.5vw, 2.8rem);
     font-weight: 900;
     letter-spacing: -1.2px;
-    color: #0F172A;
+    color: #0F2537;
     margin-bottom: 0.5rem;
   }
 
   .contact-desc {
     font-size: 1.05rem;
-    color: #475569;
+    color: #6B7280;
   }
 
   .pro-contact-form {
@@ -94,7 +94,6 @@
     gap: 1.6rem !important;
   }
 
-  /* Grid de 3 campos alineados en escritorio, 1 por fila en móvil */
   .form-grid-inputs {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
@@ -118,7 +117,7 @@
   .input-field label {
     font-size: 0.85rem;
     font-weight: 800;
-    color: #0F172A;
+    color: #0F2537;
     letter-spacing: 0.2px;
   }
 
@@ -127,10 +126,10 @@
     width: 100% !important;
     box-sizing: border-box !important;
     padding: 0.95rem 1.2rem !important;
-    background: #F8FAFC !important;
-    border: 1.5px solid rgba(15, 23, 42, 0.08) !important;
+    background: #F8F9FA !important;
+    border: 1.5px solid rgba(15, 37, 55, 0.08) !important;
     border-radius: 12px !important;
-    color: #0F172A !important;
+    color: #0F2537 !important;
     font-size: 0.95rem !important;
     font-family: inherit !important;
     outline: none !important;
@@ -140,29 +139,32 @@
   .input-field input:focus,
   .input-field textarea:focus {
     background: #FFFFFF !important;
-    border-color: #2563EB !important;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1) !important;
+    border-color: #C7A96A !important;
+    box-shadow: 0 0 0 4px rgba(199, 169, 106, 0.15) !important;
   }
 
+  /* BOTÓN FORMULARIO AZUL PROFUNDO CON HOVER DORADO */
   .submit-action-btn {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 10px !important;
-    background: #0F172A !important;
+    background: #0F2537 !important;
     color: #FFFFFF !important;
-    border: none !important;
+    border: 1px solid rgba(199, 169, 106, 0.3) !important;
     padding: 1.1rem !important;
     border-radius: 12px !important;
     font-weight: 800 !important;
     font-size: 1rem !important;
     cursor: pointer !important;
-    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2) !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 37, 55, 0.25) !important;
     transition: transform 0.2s ease, background-color 0.2s ease;
   }
 
   .submit-action-btn:hover {
-    background: #2563EB !important;
+    background: #C7A96A !important;
+    color: #0F2537 !important;
+    border-color: #C7A96A !important;
     transform: translateY(-2px);
   }
 </style>

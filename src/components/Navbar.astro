@@ -1,20 +1,15 @@
 ---
 // src/components/Navbar.astro
+import atriaIcon from '../assets/ATRIA_icon_64px.png';
 ---
 
 <header class="navbar-wrapper">
   <div class="container navbar">
     <a href="#" class="brand">
-      <svg class="brand-icon" width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="36" height="36" rx="10" fill="rgba(37, 99, 235, 0.08)" stroke="rgba(37, 99, 235, 0.2)" stroke-width="1.5"/>
-        <path d="M12 25L18 11L24 25" stroke="#0F172A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M14.5 20H21.5" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round"/>
-        <circle cx="18" cy="11" r="2.2" fill="#10B981"/>
-      </svg>
-
+      <img src={atriaIcon.src} alt="ATRIA" class="brand-img" />
       <div class="brand-text-group">
-        <span class="logo-name">ITAREN<span class="gradient-text">.SOFTWARE</span></span>
-        <span class="logo-subtitle code-font">DIGITAL CONSULTING</span>
+        <span class="logo-name">ATRIA<span class="gold-dot">.</span><span class="logo-tech">TECH</span></span>
+        <span class="logo-subtitle code-font">INGENIERÍA & SOFTWARE</span>
       </div>
     </a>
     
@@ -34,8 +29,8 @@
     z-index: 100;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    background: rgba(248, 250, 252, 0.85);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid rgba(15, 37, 55, 0.08);
     width: 100%;
   }
 
@@ -43,46 +38,57 @@
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 0.95rem 0;
+    padding: 0.75rem 0 !important;
   }
 
   .brand {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 12px !important;
+    gap: 10px !important;
     text-decoration: none !important;
   }
 
-  .brand-icon {
-    width: 34px !important;
-    height: 34px !important;
+  /* LOGO CONTROLADO Y PROPORCIONADO */
+  .brand-img {
+    height: 32px !important;
+    width: auto !important;
+    max-width: 32px !important;
+    object-fit: contain !important;
+    display: block !important;
   }
 
   .brand-text-group {
     display: flex !important;
     flex-direction: column !important;
     text-align: left !important;
+    line-height: 1 !important;
   }
 
   .logo-name {
-    font-size: 1.18rem !important;
+    font-size: 1.15rem !important;
     font-weight: 900 !important;
-    color: #0F172A !important;
-    line-height: 1.1 !important;
-    letter-spacing: -0.5px !important;
+    color: #0F2537 !important;
+    letter-spacing: -0.4px !important;
+    display: flex !important;
+    align-items: baseline !important;
   }
 
-  .gradient-text {
-    background: linear-gradient(135deg, #2563EB, #10B981);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .gold-dot {
+    color: #C7A96A !important;
+  }
+
+  .logo-tech {
+    font-size: 0.92rem !important;
+    font-weight: 700 !important;
+    color: #6B7280 !important;
   }
 
   .logo-subtitle {
-    font-size: 0.62rem !important;
-    color: #64748B !important;
+    font-size: 0.58rem !important;
+    color: #9CA3AF !important;
     letter-spacing: 1.2px !important;
     font-weight: 700 !important;
+    margin-top: 2px !important;
   }
 
   .nav-links {
@@ -92,31 +98,34 @@
   }
 
   .nav-item {
-    color: #475569 !important;
+    color: #4B5563 !important;
     text-decoration: none !important;
-    font-size: 0.92rem !important;
+    font-size: 0.9rem !important;
     font-weight: 600 !important;
     transition: color 0.2s ease;
   }
 
   .nav-item:hover {
-    color: #2563EB !important;
+    color: #0F2537 !important;
   }
 
   .btn-nav {
-    background: #0F172A !important;
+    background: #0F2537 !important;
     color: #FFFFFF !important;
     text-decoration: none !important;
-    padding: 0.6rem 1.4rem !important;
-    border-radius: 10px !important;
-    font-size: 0.88rem !important;
-    font-weight: 800 !important;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
-    transition: transform 0.2s ease, background-color 0.2s ease !important;
+    padding: 0.55rem 1.25rem !important;
+    border-radius: 9px !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    border: 1px solid rgba(199, 169, 106, 0.4) !important;
+    box-shadow: 0 4px 12px rgba(15, 37, 55, 0.12) !important;
+    transition: all 0.2s ease !important;
   }
 
   .btn-nav:hover {
     transform: translateY(-2px);
-    background: #2563EB !important;
+    background: #C7A96A !important;
+    color: #0F2537 !important;
+    border-color: #C7A96A !important;
   }
 </style>

@@ -74,11 +74,12 @@ const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
     padding: 3.5rem 0 4rem;
     overflow: hidden;
     position: relative;
-    border-top: 1px solid rgba(15, 23, 42, 0.06);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    border-top: 1px solid rgba(15, 37, 55, 0.07);
+    border-bottom: 1px solid rgba(15, 37, 55, 0.07);
     background: transparent;
   }
 
+  /* DESTELLO DE LUZ CALIBRADO AL DORADO ATRIA */
   .clients-glow {
     position: absolute;
     top: 50%;
@@ -86,14 +87,14 @@ const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
     transform: translate(-50%, -50%);
     width: 60%;
     height: 100%;
-    background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(199, 169, 106, 0.12) 0%, transparent 70%);
     pointer-events: none;
   }
 
   .clients-title {
     text-align: center;
-    font-size: 0.78rem;
-    color: #64748B;
+    font-size: 0.76rem;
+    color: #6B7280;
     letter-spacing: 2px;
     margin-bottom: 2.5rem;
     text-transform: uppercase;
@@ -159,7 +160,7 @@ const fullList = [...clientLogos, ...clientLogos, ...clientLogos];
     max-width: 150px !important;
     object-fit: contain;
     display: block;
-    filter: grayscale(1) opacity(0.5);
+    filter: grayscale(1) opacity(0.45);
     transition: opacity 0.25s ease, filter 0.25s ease;
   }
 

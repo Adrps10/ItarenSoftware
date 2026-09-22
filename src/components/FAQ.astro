@@ -3,23 +3,23 @@
 const faqs = [
   {
     q: "¿Quién es el propietario del código fuente al finalizar el proyecto?",
-    a: "Tú eres el propietario absoluto del 100% del código fuente, las bases de datos y la propiedad intelectual. Al concluir y liquidar el desarrollo, te transferimos los repositorios completos (Git), credenciales y documentación técnica sin ataduras ni cobros ocultos de licenciamiento."
+    a: "Tú eres el propietario absoluto del 100% del código fuente, las bases de datos y la propiedad intelectual. Al liquidar el proyecto, transferimos los repositorios Git completos, credenciales y documentación técnica sin costos de licenciamiento posteriores."
   },
   {
     q: "¿Cómo es el proceso de trabajo y los tiempos de entrega promedio?",
-    a: "Trabajamos con sprints ágiles de 2 semanas con entregables visuales y funcionales en servidores de prueba (staging). Proyectos medianos (como un CRM especializado o un POS) suelen tomar entre 4 y 8 semanas, mientras que aplicaciones móviles completas toman entre 8 y 12 semanas."
+    a: "Trabajamos con sprints quincenales y entregables funcionales en servidores de prueba. Proyectos de alcance medio (CRM, POS transaccional) toman entre 4 y 8 semanas; aplicaciones móviles nativas completas entre 8 y 12 semanas."
   },
   {
     q: "¿Qué tipo de soporte y garantía ofrecen después del lanzamiento?",
-    a: "Todos nuestros desarrollos incluyen garantía contra bugs o fallas técnicas durante los primeros 60 días posteriores a la salida a producción. Además, ofrecemos planes mensuales de mantenimiento, escalabilidad en la nube (AWS/Docker) y soporte continuo."
+    a: "Incluimos 60 días de garantía total contra incidencias tras la salida a producción, además de planes mensuales opcionales de mantenimiento, infraestructura cloud (AWS/Docker) y soporte continuo."
   },
   {
     q: "¿Pueden integrar el software con mis sistemas actuales (ERP, WhatsApp, Pasarelas)?",
-    a: "Sí. Desarrollamos arquitecturas de microservicios y APIs REST diseñadas específicamente para comunicarse con sistemas existentes como SAP, Salesforce, pasarelas de pago (Stripe, Mercado Pago) y Webhooks automatizados de WhatsApp Business."
+    a: "Sí. Desarrollamos microservicios y APIs REST diseñadas para conectarse con SAP, Salesforce, pasarelas de pago (Stripe, Mercado Pago) y servicios de mensajería empresarial."
   },
   {
-    q: "¿Cómo se manejan los pagos del proyecto?",
-    a: "Estructuramos el pago contra hitos medibles: un anticipo inicial para iniciar el levantamiento y diseño de arquitectura, pagos intermedios contra entregables funcionales verificados, y un saldo final contra entrega de código y despliegue a producción."
+    q: "¿Cómo se estructuran los pagos del desarrollo?",
+    a: "Trabajamos bajo hitos verificables: anticipo inicial para arquitectura y diseño, pagos intermedios contra entregables funcionales en staging, y liquidación final contra entrega de código y puesta en producción."
   }
 ];
 ---
@@ -44,7 +44,7 @@ const faqs = [
           <summary class="faq-question">
             <span class="q-title">{item.q}</span>
             <span class="q-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </span>
@@ -74,34 +74,36 @@ const faqs = [
     text-align: left;
   }
 
+  /* TARJETA BLANCA LIMPIA (ADIÓS AL FONDO NEGRO RESIDUAL) */
   .faq-item {
-    background: #161922 !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: #FFFFFF !important;
+    border: 1.5px solid rgba(15, 37, 55, 0.08) !important;
     border-radius: 20px !important;
-    padding: 0.5rem 1.8rem !important;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+    padding: 0.4rem 1.8rem !important;
+    box-shadow: 0 4px 14px rgba(15, 37, 55, 0.04) !important;
     transition: all 0.25s ease;
   }
 
   .faq-item:hover {
-    border-color: rgba(99, 102, 241, 0.3) !important;
+    border-color: #C7A96A !important;
+    box-shadow: 0 8px 20px rgba(199, 169, 106, 0.12) !important;
   }
 
   .faq-item[open] {
-    border-color: rgba(99, 102, 241, 0.4) !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+    border-color: #0F2537 !important;
+    box-shadow: 0 10px 25px rgba(15, 37, 55, 0.08) !important;
   }
 
   .faq-question {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 1.4rem 0 !important;
+    padding: 1.35rem 0 !important;
     cursor: pointer !important;
     list-style: none !important;
-    font-size: 1.12rem;
+    font-size: 1.1rem;
     font-weight: 800;
-    color: #FFFFFF;
+    color: #0F2537 !important;
     user-select: none;
     letter-spacing: -0.3px;
   }
@@ -117,26 +119,27 @@ const faqs = [
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #1E2230;
-    color: #6366F1;
-    transition: transform 0.3s ease;
+    background: #E5E7EB;
+    color: #0F2537;
+    transition: transform 0.3s ease, background-color 0.2s ease;
     flex-shrink: 0;
   }
 
   .faq-item[open] .q-icon {
     transform: rotate(180deg);
-    background: rgba(99, 102, 241, 0.2);
+    background: rgba(199, 169, 106, 0.25);
+    color: #8E7036;
   }
 
   .faq-answer {
     padding: 0 0 1.5rem 0 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 1.2rem !important;
+    border-top: 1px solid rgba(15, 37, 55, 0.06);
+    padding-top: 1.1rem !important;
   }
 
   .faq-answer p {
-    font-size: 0.98rem;
-    color: #94A3B8;
+    font-size: 0.96rem;
+    color: #4B5563 !important;
     line-height: 1.7;
     margin: 0;
   }

@@ -98,7 +98,7 @@
       }
 
       if (contactTextarea) {
-        contactTextarea.value = `Hola, me interesa iniciar un proyecto con ITAREN SOFTWARE con los siguientes módulos: ${selected.join(', ')}.`;
+        contactTextarea.value = `Hola ATRIA, me interesa cotizar una solución con los siguientes módulos: ${selected.join(', ')}.`;
       }
     }
 
@@ -116,12 +116,12 @@
 
   .estimator-card {
     background: #FFFFFF !important;
-    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    border: 1.5px solid rgba(15, 37, 55, 0.08) !important;
     border-radius: 26px !important;
     padding: 3rem !important;
     max-width: 1060px;
     margin: 0 auto;
-    box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.05) !important;
+    box-shadow: 0 15px 35px -10px rgba(15, 37, 55, 0.06) !important;
   }
 
   @media (max-width: 768px) {
@@ -140,8 +140,8 @@
     align-items: flex-start !important;
     gap: 14px;
     padding: 1.5rem !important;
-    background: #F8FAFC !important;
-    border: 1.5px solid rgba(15, 23, 42, 0.08) !important;
+    background: #F8F9FA !important;
+    border: 1.5px solid rgba(15, 37, 55, 0.08) !important;
     border-radius: 18px !important;
     cursor: pointer;
     text-align: left;
@@ -149,18 +149,18 @@
   }
 
   .interactive-option:hover {
-    border-color: #2563EB !important;
+    border-color: #C7A96A !important;
     transform: translateY(-2px);
   }
 
   .interactive-option:has(input:checked) {
     background: #FFFFFF !important;
-    border-color: #2563EB !important;
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1) !important;
+    border-color: #0F2537 !important;
+    box-shadow: 0 8px 20px rgba(15, 37, 55, 0.08) !important;
   }
 
   .interactive-option input {
-    accent-color: #2563EB;
+    accent-color: #0F2537;
     width: 20px;
     height: 20px;
     margin-top: 3px;
@@ -172,14 +172,14 @@
     display: block;
     font-size: 1rem;
     font-weight: 800;
-    color: #0F172A;
+    color: #0F2537;
     margin-bottom: 0.3rem;
   }
 
   .opt-desc {
     display: block;
     font-size: 0.85rem;
-    color: #475569;
+    color: #6B7280;
     line-height: 1.5;
   }
 
@@ -187,10 +187,10 @@
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    background: #0F172A !important;
+    background: #0F2537 !important;
     padding: 1.4rem 2.2rem !important;
     border-radius: 18px !important;
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15) !important;
+    box-shadow: 0 10px 25px rgba(15, 37, 55, 0.2) !important;
   }
 
   @media (max-width: 700px) {
@@ -214,7 +214,7 @@
 
   .sum-lbl {
     font-size: 0.72rem;
-    color: #94A3B8;
+    color: #9CA3AF;
     font-weight: 700;
     letter-spacing: 1px;
   }
@@ -222,27 +222,28 @@
   .sum-val {
     font-size: 1.35rem;
     font-weight: 900;
-    color: #2563EB;
+    color: #C7A96A;
     letter-spacing: -0.5px;
   }
 
+  /* BOTON RESUMEN DORADO ATRIA */
   .summary-btn {
     display: inline-flex !important;
     align-items: center !important;
     gap: 8px;
-    background: #2563EB !important;
-    color: #FFFFFF !important;
+    background: #C7A96A !important;
+    color: #0F2537 !important;
     text-decoration: none !important;
     padding: 1rem 2rem !important;
     border-radius: 12px !important;
     font-weight: 800;
     font-size: 0.95rem;
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3) !important;
+    box-shadow: 0 8px 20px rgba(199, 169, 106, 0.35) !important;
     transition: transform 0.2s ease, background-color 0.2s ease;
   }
 
   .summary-btn:hover {
     transform: translateY(-2px);
-    background: #1d4ed8 !important;
+    background: #dbbe7d !important;
   }
 </style>

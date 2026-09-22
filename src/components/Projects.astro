@@ -8,7 +8,7 @@ const projects = [
     desc: "Infraestructura analítica para agencias automotrices con captura de encuestas de satisfacción, seguimiento de citas y sincronización en tiempo real con asesores.",
     metric: "+65% captura de feedback",
     stack: ["Java / Spring Boot", "PostgreSQL", "Astro", "REST API"],
-    accent: "#2563EB"
+    accent: "#C7A96A"
   },
   {
     category: "Mobile & Operación en Campo",
@@ -17,7 +17,7 @@ const projects = [
     desc: "Herramienta móvil nativa para Android e iOS con modo offline total, escaneo óptico de datos, captura de evidencia fotográfica y reporte instantáneo.",
     metric: "iOS & Android (100% Nativo)",
     stack: ["Flutter", "Dart", "Firebase Push", "Offline Sync"],
-    accent: "#10B981"
+    accent: "#0F2537"
   },
   {
     category: "Retail & Comercializadoras",
@@ -26,7 +26,7 @@ const projects = [
     desc: "Sistema transaccional de caja con facturación electrónica inmediata, control estricto de accesos por roles y conciliación financiera en tiempo real.",
     metric: "< 1s por transacción",
     stack: ["Docker", "Vue.js", "MySQL", "Seguridad JWT"],
-    accent: "#2563EB"
+    accent: "#C7A96A"
   },
   {
     category: "Portales B2B & Showrooms",
@@ -35,7 +35,7 @@ const projects = [
     desc: "Portal interactivo con catálogo dinámico de inventario, conexión automatizada a WhatsApp empresarial y sincronización directa al CRM comercial.",
     metric: "100/100 Core Web Vitals",
     stack: ["Astro SSR", "TypeScript", "Tailwind CSS"],
-    accent: "#0F172A"
+    accent: "#0F2537"
   }
 ];
 ---
@@ -63,7 +63,7 @@ const projects = [
           </div>
 
           <div class="card-main">
-            <span class="proj-tag-badge" style={`color: ${proj.accent}; border: 1px solid rgba(15, 23, 42, 0.1); background-color: #F8FAFC;`}>
+            <span class="proj-tag-badge" style={`color: ${proj.accent}; border: 1px solid ${proj.accent}40; background-color: ${proj.accent}12;`}>
               {proj.tag}
             </span>
             <h3 class="proj-title">{proj.title}</h3>
@@ -96,20 +96,20 @@ const projects = [
     align-items: center;
     gap: 8px;
     background: #FFFFFF;
-    border: 1px solid rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(15, 37, 55, 0.1);
     padding: 0.45rem 1.2rem;
     border-radius: 9999px;
     font-size: 0.82rem;
     font-weight: 700;
-    color: #0F172A;
+    color: #0F2537;
     margin: 0 auto 1.2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
   }
 
   .pulse-dot {
     width: 7px;
     height: 7px;
-    background: #2563EB;
+    background: #C7A96A;
     border-radius: 50%;
   }
 
@@ -118,21 +118,21 @@ const projects = [
     font-size: clamp(2.2rem, 4vw, 3.4rem);
     font-weight: 900;
     letter-spacing: -1.5px;
-    color: #0F172A;
+    color: #0F2537;
     line-height: 1.1;
     margin-bottom: 1rem;
   }
 
   .headline-gradient {
-    background: linear-gradient(135deg, #2563EB 0%, #0F172A 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, #0F2537 20%, #C7A96A 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
   }
 
   .section-subline {
     text-align: center;
     font-size: 1.1rem;
-    color: #475569;
+    color: #6B7280;
     max-width: 680px;
     margin: 0 auto 3.5rem;
     line-height: 1.6;
@@ -153,19 +153,20 @@ const projects = [
 
   .project-card {
     background: #FFFFFF !important;
-    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    border: 1.5px solid rgba(15, 37, 55, 0.08) !important;
     border-radius: 22px !important;
     padding: 2.2rem !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04) !important;
-    transition: transform 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 10px 25px -5px rgba(15, 37, 55, 0.05) !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
 
   .project-card:hover {
     transform: translateY(-4px);
-    border-color: #2563EB !important;
+    border-color: #C7A96A !important;
+    box-shadow: 0 16px 35px -5px rgba(199, 169, 106, 0.18) !important;
   }
 
   .card-header {
@@ -178,7 +179,7 @@ const projects = [
 
   .proj-category {
     font-size: 0.75rem;
-    color: #64748B;
+    color: #6B7280;
     text-transform: uppercase;
     letter-spacing: 0.8px;
     font-weight: 700;
@@ -186,9 +187,9 @@ const projects = [
 
   .proj-metric-pill {
     font-size: 0.75rem;
-    color: #2563EB;
-    background: rgba(37, 99, 235, 0.08);
-    border: 1px solid rgba(37, 99, 235, 0.2);
+    color: #0F2537;
+    background: rgba(199, 169, 106, 0.14);
+    border: 1px solid rgba(199, 169, 106, 0.35);
     padding: 3px 10px;
     border-radius: 9999px;
     font-weight: 800;
@@ -213,7 +214,7 @@ const projects = [
   .proj-title {
     font-size: 1.35rem;
     font-weight: 900;
-    color: #0F172A;
+    color: #0F2537;
     line-height: 1.3;
     letter-spacing: -0.5px;
     margin-bottom: 0.6rem;
@@ -221,19 +222,19 @@ const projects = [
 
   .proj-desc {
     font-size: 0.95rem;
-    color: #475569;
+    color: #4B5563;
     line-height: 1.6;
   }
 
   .card-bottom {
-    border-top: 1px solid rgba(15, 23, 42, 0.06);
+    border-top: 1px solid rgba(15, 37, 55, 0.06);
     padding-top: 1.25rem;
   }
 
   .stack-label {
     display: block;
     font-size: 0.68rem;
-    color: #64748B;
+    color: #6B7280;
     font-weight: 800;
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
@@ -247,9 +248,9 @@ const projects = [
 
   .tech-chip {
     font-size: 0.75rem;
-    color: #0F172A;
-    background: #F1F5F9;
-    border: 1px solid rgba(15, 23, 42, 0.06);
+    color: #0F2537;
+    background: #E5E7EB;
+    border: 1px solid rgba(15, 37, 55, 0.08);
     padding: 3px 9px;
     border-radius: 6px;
     font-weight: 600;
